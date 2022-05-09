@@ -5,3 +5,9 @@ stages:
     - src/get_data.py
     outs:
     - dataset
+  preprocess:
+    cmd: python src/text_preprocessing.py
+    deps:
+    - src/text_preprocessing.py
+    outs:
+    - output/preprocessor.joblib

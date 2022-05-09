@@ -11,3 +11,9 @@ stages:
     - src/text_preprocessing.py
     outs:
     - output/preprocessor.joblib
+  train:
+    cmd: python src/text_classification.py AdaBoost
+    deps:
+    - src/text_classification.py
+    outs:
+    - output/AdaBoost_model.joblib

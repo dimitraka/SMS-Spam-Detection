@@ -21,3 +21,13 @@ stages:
     - path: output/preprocessor.joblib
       md5: 13479425225b8c9c2d112b9a8f0ca8f3
       size: 105666
+  train:
+    cmd: python src/text_classification.py AdaBoost
+    deps:
+    - path: src/text_classification.py
+      md5: 69aeabf3f6620ea5d96605234fe44bc8
+      size: 3766
+    outs:
+    - path: output/AdaBoost_model.joblib
+      md5: ba64801f8d872b5505d4726120dfb39f
+      size: 42379
